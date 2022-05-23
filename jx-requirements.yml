@@ -20,8 +20,7 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: example.com
     namespaceSubDomain: -jx.
     tls:
       email: ""
