@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: vsellier
+    provider: github
+    repository: jx-deployment-test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: vsellier-jx-deployment-test
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/vsellier/jx-deployment-test.git
+  org: vsellier
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx-deployment-test
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/vsellier/jx-deployment-test

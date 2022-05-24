@@ -7,6 +7,7 @@ data:
       LinkURL: null
     in_repo_config:
       enabled:
+        vsellier/jx-deployment-test: true
         vsellier/jx3-kubernetes: true
     plank: {}
     pod_namespace: jx
@@ -19,6 +20,7 @@ data:
         required-if-present-contexts: null
         skip-unknown-contexts: false
       merge_method:
+        vsellier/jx-deployment-test: merge
         vsellier/jx3-kubernetes: merge
       queries:
       - labels:
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - vsellier/jx3-kubernetes
+        - vsellier/jx-deployment-test
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +44,7 @@ data:
         - needs-rebase
         repos:
         - vsellier/jx3-kubernetes
+        - vsellier/jx-deployment-test
       target_url: http://lighthouse-jx.example.com/merge/status
 kind: ConfigMap
 metadata:
